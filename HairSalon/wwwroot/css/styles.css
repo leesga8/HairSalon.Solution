@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap');
+
+body{
+  text-align: center;
+  font-family: 'Arvo', serif;
+  font-size: 2em;
+}
+
+#footer {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:#CCC;
+  background:#333;
+  padding:8px;
+  font-size: .75em;
+}
+
+.navbar{
+  color:rgb(30, 170, 186);
+  background:rgb(70, 3, 74);
+  width:100%;
+  position:fixed;
+  padding:8px;
+  font-size:.75em;
+}
