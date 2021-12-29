@@ -1,9 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap');
 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 body{
   text-align: center;
-  font-family: 'Arvo', serif;
-  font-size: 2em;
+  font-family: 'Prata', serif;
+  font-size: 3em;
+}
+
+h1,h2,h3,h4{
+  font-size:1.5em;
+  margin: 1em;
+  text-decoration: underline;
+}
+
+p{
+  margin: 1em;
 }
 
 #footer {
@@ -14,14 +26,28 @@ body{
   color:#CCC;
   background:#333;
   padding:8px;
-  font-size: .75em;
+  font-size: .5em;
+}
+
+ul, il{
+
+  list-style-position: inside;
 }
 
 .navbar{
-  color:rgb(30, 170, 186);
-  background:rgb(70, 3, 74);
+  color:rgb(0, 178, 227);
+  background:rgb(99, 0, 132);
   width:100%;
-  position:fixed;
   padding:8px;
-  font-size:.75em;
+  font-size:1em;
+}
+
+.navbar-brand{
+  font-size: 1em;
+}
+
+.ml-auto,
+a{
+  font-size: 1em;
+  margin-right: .5em;
 }
