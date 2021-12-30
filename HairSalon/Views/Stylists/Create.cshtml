@@ -1,3 +1,5 @@
+@using HairSalon.Models
+
 @{
   Layout = "_Layout";
 }
@@ -7,8 +9,19 @@
 <h4>Add a new stylist</h4>
 @using (Html.BeginForm())
 {
-    <p>@Html.LabelFor(model => model.Name): </p>
-    @Html.TextBoxFor(model => model.Name)
-    <input type="submit" value="Add" />
+  <p>@Html.LabelFor(model => model.Name): 
+  @Html.TextBoxFor(model => model.Name)</p>
+
+  <p>@Html.LabelFor(model => model.DateHired, new {@type="date"})
+  @Html.TextBoxFor(model => model.DateHired, new {@type="date"})</p>
+
+   @* <p> @Html.LabelFor(model => model.Specialty)
+    @Html.DropDownList("StylistSpecialty")</p> *@
+
+  @* @Html.DropDownListFor(m => m.StylistSpecialty,
+  new SelectList(Enum.GetValues(typeof(Specialty))),
+  "Select Specialty") *@
+
+  <input type="submit" value="Add" />
 }
 <p>@Html.ActionLink("Show all stylists", "Index")</p>
