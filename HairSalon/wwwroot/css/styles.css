@@ -55,3 +55,19 @@ a{
   font-size: 1em;
   margin-right: .5em;
 }
+
+#leftClientDetails{
+  float: left;
+  overflow:hidden;
+  width: 50%;
+}
+
+#rightClientDetails{
+  margin-bottom: 8em;
+}
+
+#bottomClientDetails{
+  display: block;
+  padding-bottom: 1em;
+  float: none;
+}

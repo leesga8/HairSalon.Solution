@@ -15,14 +15,6 @@
   <p>@Html.LabelFor(model => model.DateHired, new {@type="date"})
   @Html.TextBoxFor(model => model.DateHired, new {@type="date"})</p>
 
-  @* @Html.DropDownListFor(m => m.StylistSpecialty,
-  new SelectList(Enum.GetValues(typeof(Specialty))),
-  "Select Specialty") *@
-
-  @Html.DropDownList("StylistSpecialty",
-new SelectList(Enum.GetValues(typeof(Specialty))),
-"Select Specialty",
-new { @class = "form-control" })
   <input type="submit" value="Add" />
 }
 <p>@Html.ActionLink("Show all stylists", "Index")</p>

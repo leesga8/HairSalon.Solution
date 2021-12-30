@@ -1,4 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;  
+using System.Text;  
+using System.Threading.Tasks;  
 using System;
 
 namespace HairSalon.Models
@@ -13,14 +16,5 @@ namespace HairSalon.Models
     public string Name { get; set; }
     public DateTime DateHired { get; set; }
     public virtual ICollection<Client> Clients { get; set; }
-
-    public Specialty StylistSpecialty { get; set; }
-  }
-  public enum Specialty
-  {
-    Perm,
-    Balage
-    // Curly,
-    // Fade
   }
 }

@@ -2,14 +2,37 @@
   Layout = "_Layout";
 }
 
+@using HairSalon.Models
 @model HairSalon.Models.Stylist
-
 <h2>Stylist Details</h2>
 <hr />
-<h4 id="cDetails">@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
-<h4 id="cDetails">@Html.DisplayNameFor(model => model.DateHired): @Html.DisplayFor(model => model.DateHired)</h4>
 
+<div id="topCD">
+  <div id="leftClientDetails">
+    <h4 id="cDetails">@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
+    <h4 id="cDetails">@Html.DisplayNameFor(model => model.DateHired): @Html.DisplayFor(model => model.DateHired)</h4>
+  </div>
 
-<p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</p>
-<p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</p>
-<p>@Html.ActionLink("Back to list", "Index")</p>
+  <div id="rightClientDetails">
+    @if (Model.Clients.Count == 0)
+    {
+      <p>There are no Clients for this Stylist</p>
+    }
+    else
+    {
+      <h4>Clients</h4>
+      <ul>
+        @foreach (Client client in Model.Clients)
+        {
+          <li>@client.Name</li>
+        }
+      </ul>
+    }
+  </div>
+</div>
+
+<div id="bottomClientDetails">
+  <p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</p>
+  <p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</p>
+  <p>@Html.ActionLink("Back to list", "Index")</p>
+</div>
