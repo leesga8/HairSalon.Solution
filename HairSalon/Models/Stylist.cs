@@ -14,14 +14,13 @@ namespace HairSalon.Models
     public DateTime DateHired { get; set; }
     public virtual ICollection<Client> Clients { get; set; }
 
-    //   public Specialty StylistSpecialty { get; set; }
-    // }
-    // public enum Specialty
-    // {
-    //   Perm,
-    //   Balage
-    //   // Curly,
-    //   // Fade
-    // }
+    public Specialty StylistSpecialty { get; set; }
+  }
+  public enum Specialty
+  {
+    Perm,
+    Balage
+    // Curly,
+    // Fade
   }
 }
