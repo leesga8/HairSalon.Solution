@@ -7,11 +7,11 @@
 <h4>Add a new client</h4>
 @using (Html.BeginForm())
 {
-    <p>@Html.LabelFor(model => model.Name): 
-    @Html.TextBoxFor(model => model.Name) </p>
+    <p>@Html.LabelFor(model => model.Name, new{@type="string", required = "required"}): 
+    @Html.TextBoxFor(model => model.Name, new{@type="string", required = "required"}) </p>
 
-    <p>@Html.LabelFor(model => model.Description):
-    @Html.TextAreaFor(model => model.Description, new { rows="1" }) </p>
+    <p>@Html.LabelFor(model => model.Description, new{@type="string", required = "required"}):
+    @Html.TextAreaFor(model => model.Description, new { rows="1", required = "required"}) </p>
 
     @Html.LabelFor(model => model.Stylist)
     @Html.DropDownList("StylistId")

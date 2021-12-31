@@ -63,11 +63,12 @@ a{
 }
 
 #rightClientDetails{
-  margin-bottom: 8em;
+  margin-bottom: 1em;
+  overflow:auto;
 }
 
 #bottomClientDetails{
   display: block;
   padding-bottom: 1em;
-  float: none;
+  clear: left;
 }
